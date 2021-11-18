@@ -43,6 +43,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "work_address": {
+      "type": "string",
+      "required": false
     }
   }
 }
