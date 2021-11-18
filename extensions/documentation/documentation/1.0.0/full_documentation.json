@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/18/2021 2:48:12 PM"
+    "x-generation-date": "11/18/2021 2:51:05 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3858,6 +3858,69 @@
           "role_name": {
             "type": "string"
           },
+          "users": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmationToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "image_profile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "user_profile": {
+                  "type": "string"
+                },
+                "role_customs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3871,6 +3934,12 @@
         "properties": {
           "role_name": {
             "type": "string"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -4065,6 +4134,15 @@
                     "type": "string"
                   }
                 },
+                "user_profile": {
+                  "type": "string"
+                },
+                "role_customs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -4247,6 +4325,61 @@
                 }
               }
             }
+          },
+          "user_profile": {
+            "required": [
+              "id",
+              "work_address"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "work_address": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "role_customs": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "role_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "role_name": {
+                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -4288,6 +4421,15 @@
           },
           "role": {
             "type": "string"
+          },
+          "user_profile": {
+            "type": "string"
+          },
+          "role_customs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

@@ -1320,6 +1320,61 @@
                 }
               }
             }
+          },
+          "user_profile": {
+            "required": [
+              "id",
+              "work_address"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "work_address": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "role_customs": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "role_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "role_name": {
+                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1361,6 +1416,15 @@
           },
           "role": {
             "type": "string"
+          },
+          "user_profile": {
+            "type": "string"
+          },
+          "role_customs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
