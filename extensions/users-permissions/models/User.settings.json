@@ -69,13 +69,14 @@
       "required": false,
       "pluginOptions": {}
     },
-    "user_profile": {
-      "model": "user-profile"
-    },
     "role_customs": {
       "collection": "role-custom",
       "via": "users",
       "dominant": true
+    },
+    "user_profile": {
+      "via": "user",
+      "model": "user-profile"
     }
   }
 }

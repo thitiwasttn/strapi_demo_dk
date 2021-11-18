@@ -567,14 +567,14 @@
                     "type": "string"
                   }
                 },
-                "user_profile": {
-                  "type": "string"
-                },
                 "role_customs": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "user_profile": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
