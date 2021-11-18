@@ -77,6 +77,10 @@
     "user_profile": {
       "via": "user",
       "model": "user-profile"
+    },
+    "certification": {
+      "model": "certification",
+      "via": "user"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/user-profiles": {
+    "/certifications": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Certification"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Certification"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-profile"
+                "$ref": "#/components/schemas/NewCertification"
               }
             }
           }
         }
       }
     },
-    "/user-profiles/count": {
+    "/certifications/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "parameters": []
       }
     },
-    "/user-profiles/{id}": {
+    "/certifications/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Certification"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Certification"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-profile"
+                "$ref": "#/components/schemas/NewCertification"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "User-profile"
+          "Certification"
         ],
         "parameters": [
           {
@@ -527,90 +514,15 @@
   },
   "components": {
     "schemas": {
-      "User-profile": {
+      "Certification": {
         "required": [
-          "id",
-          "work_address",
-          "first_name",
-          "last_name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "work_address": {
-            "type": "string"
-          },
-          "first_name": {
-            "type": "string"
-          },
-          "last_name": {
-            "type": "string"
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "image_profile": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "role_customs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_profile": {
-                "type": "string"
-              },
-              "certification": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "image_profile": {
+          "cert": {
             "required": [
               "id",
               "name",
@@ -677,28 +589,77 @@
               }
             }
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "image_profile": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "role_customs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_profile": {
+                "type": "string"
+              },
+              "certification": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewUser-profile": {
-        "required": [
-          "work_address",
-          "first_name",
-          "last_name"
-        ],
+      "NewCertification": {
         "properties": {
-          "work_address": {
-            "type": "string"
-          },
-          "first_name": {
-            "type": "string"
-          },
-          "last_name": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
@@ -716,5 +677,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Certification"
+    }
+  ]
 }
