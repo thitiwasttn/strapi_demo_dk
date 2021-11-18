@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "role_customs",
+  "info": {
+    "name": "role_custom"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "role_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
