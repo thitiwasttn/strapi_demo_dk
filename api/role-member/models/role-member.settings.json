@@ -15,10 +15,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "members": {
-      "via": "role_members",
-      "collection": "member"
     }
   }
 }
