@@ -81,6 +81,10 @@
     "certification": {
       "model": "certification",
       "via": "user"
+    },
+    "sp_roles": {
+      "collection": "sp-role",
+      "via": "user"
     }
   }
 }

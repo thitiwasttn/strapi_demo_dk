@@ -596,6 +596,12 @@
                 "certification": {
                   "type": "string"
                 },
+                "sp_roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/19/2021 10:56:38 AM"
+    "x-generation-date": "11/19/2021 11:01:33 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5318,6 +5318,12 @@
               "certification": {
                 "type": "string"
               },
+              "sp_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -5452,6 +5458,12 @@
                 "certification": {
                   "type": "string"
                 },
+                "sp_roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -5572,6 +5584,75 @@
               }
             }
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "image_profile": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "role_customs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_profile": {
+                "type": "string"
+              },
+              "certification": {
+                "type": "string"
+              },
+              "sp_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5587,6 +5668,9 @@
             "type": "string"
           },
           "role_custom": {
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -5675,6 +5759,12 @@
               },
               "certification": {
                 "type": "string"
+              },
+              "sp_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -5904,6 +5994,12 @@
                 },
                 "certification": {
                   "type": "string"
+                },
+                "sp_roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -6181,6 +6277,38 @@
                 "type": "string"
               }
             }
+          },
+          "sp_roles": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role_custom": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -6234,6 +6362,12 @@
           },
           "certification": {
             "type": "string"
+          },
+          "sp_roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

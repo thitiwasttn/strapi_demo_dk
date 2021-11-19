@@ -17,6 +17,11 @@
     },
     "role_custom": {
       "model": "role-custom"
+    },
+    "user": {
+      "via": "sp_roles",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
