@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "sp_roles",
   "info": {
-    "name": "sp_role"
+    "name": "sp_role",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,12 +17,8 @@
       "required": true
     },
     "role_custom": {
-      "model": "role-custom"
-    },
-    "user": {
       "via": "sp_roles",
-      "plugin": "users-permissions",
-      "model": "user"
+      "model": "role-custom"
     }
   }
 }

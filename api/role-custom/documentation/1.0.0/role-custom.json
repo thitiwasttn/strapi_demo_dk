@@ -590,9 +590,6 @@
                     "type": "string"
                   }
                 },
-                "user_profile": {
-                  "type": "string"
-                },
                 "certification": {
                   "type": "string"
                 },
@@ -601,6 +598,38 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user_profile": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "sp_roles": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "role_custom": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -626,6 +655,12 @@
             "type": "string"
           },
           "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sp_roles": {
             "type": "array",
             "items": {
               "type": "string"

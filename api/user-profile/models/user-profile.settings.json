@@ -24,11 +24,6 @@
       "type": "string",
       "required": true
     },
-    "user": {
-      "via": "user_profile",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "image_profile": {
       "model": "file",
       "via": "related",
@@ -38,6 +33,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_profile"
     }
   }
 }

@@ -70,21 +70,20 @@
       "pluginOptions": {}
     },
     "role_customs": {
-      "collection": "role-custom",
       "via": "users",
+      "collection": "role-custom",
       "dominant": true
-    },
-    "user_profile": {
-      "via": "user",
-      "model": "user-profile"
     },
     "certification": {
       "model": "certification",
       "via": "user"
     },
     "sp_roles": {
-      "collection": "sp-role",
-      "via": "user"
+      "collection": "sp-role"
+    },
+    "user_profile": {
+      "via": "users_permissions_user",
+      "model": "user-profile"
     }
   }
 }

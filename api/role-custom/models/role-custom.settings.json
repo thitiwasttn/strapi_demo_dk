@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "role_customs",
   "info": {
-    "name": "role_custom"
+    "name": "role_custom",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,6 +20,10 @@
       "via": "role_customs",
       "plugin": "users-permissions",
       "collection": "user"
+    },
+    "sp_roles": {
+      "via": "role_custom",
+      "collection": "sp-role"
     }
   }
 }

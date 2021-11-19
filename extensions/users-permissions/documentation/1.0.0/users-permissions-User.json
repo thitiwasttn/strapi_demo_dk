@@ -1341,6 +1341,12 @@
                     "type": "string"
                   }
                 },
+                "sp_roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1350,43 +1356,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "user_profile": {
-            "required": [
-              "id",
-              "work_address",
-              "first_name",
-              "last_name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "work_address": {
-                "type": "string"
-              },
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "image_profile": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -1432,9 +1401,6 @@
                 "role_custom": {
                   "type": "string"
                 },
-                "user": {
-                  "type": "string"
-                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1444,6 +1410,43 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "user_profile": {
+            "required": [
+              "id",
+              "work_address",
+              "first_name",
+              "last_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "work_address": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "image_profile": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -1494,9 +1497,6 @@
               "type": "string"
             }
           },
-          "user_profile": {
-            "type": "string"
-          },
           "certification": {
             "type": "string"
           },
@@ -1505,6 +1505,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "user_profile": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
