@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/user-commus/byUser",
+      "handler": "user-commu.byUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/user-commus/count",
       "handler": "user-commu.count",
       "config": {
