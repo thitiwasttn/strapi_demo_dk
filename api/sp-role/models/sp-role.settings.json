@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sp_roles",
+  "info": {
+    "name": "sp_role"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role_custom": {
+      "model": "role-custom"
+    }
+  }
+}
