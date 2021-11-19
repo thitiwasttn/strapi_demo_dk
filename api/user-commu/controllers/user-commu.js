@@ -8,9 +8,7 @@ const {sanitizeEntity} = require('strapi-utils');
 module.exports = {
   async byUser(ctx) {
     const userId = ctx.state.user.id;
-    console.log(await strapi.query('user-commu').find({}));
-    const newVar = await strapi.query('user-commu').find({users_permissions_user: userId});
-    console.log(newVar);
+    const newVar = await strapi.query('user-commu').find({user: userId});
     return newVar;
   },
 };
