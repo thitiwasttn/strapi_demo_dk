@@ -650,6 +650,9 @@
               "user_profile": {
                 "type": "string"
               },
+              "company_profile": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/user-commus": {
+    "/company-profiles": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-commu"
+                "$ref": "#/components/schemas/NewCompany-profile"
               }
             }
           }
         }
       }
     },
-    "/user-commus/byUser": {
+    "/company-profiles/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "parameters": []
       }
     },
-    "/user-commus/count": {
+    "/company-profiles/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,64 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
-        ],
-        "parameters": []
-      }
-    },
-    "/user-commus/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "parameters": [
           {
@@ -491,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "requestBody": {
           "description": "",
@@ -499,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-commu"
+                "$ref": "#/components/schemas/NewCompany-profile"
               }
             }
           }
@@ -565,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "User-commu"
+          "Company-profile"
         ],
         "parameters": [
           {
@@ -584,12 +527,22 @@
   },
   "components": {
     "schemas": {
-      "User-commu": {
+      "Company-profile": {
         "required": [
-          "id"
+          "id",
+          "company_name"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "desc": {
             "type": "string"
           },
           "user": {
@@ -664,9 +617,15 @@
               }
             }
           },
-          "community": {
+          "profile_image": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
@@ -675,10 +634,46 @@
               "name": {
                 "type": "string"
               },
-              "desc": {
+              "alternativeText": {
                 "type": "string"
               },
-              "published_at": {
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
                 "type": "string"
               },
               "created_by": {
@@ -689,12 +684,75 @@
               }
             }
           },
-          "follow_status": {
-            "type": "string",
-            "enum": [
-              "follow",
-              "unfollow"
-            ]
+          "view_image": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -702,20 +760,22 @@
           }
         }
       },
-      "NewUser-commu": {
+      "NewCompany-profile": {
+        "required": [
+          "company_name"
+        ],
         "properties": {
+          "company_name": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
           "user": {
             "type": "string"
-          },
-          "community": {
-            "type": "string"
-          },
-          "follow_status": {
-            "type": "string",
-            "enum": [
-              "follow",
-              "unfollow"
-            ]
           },
           "published_at": {
             "type": "string",

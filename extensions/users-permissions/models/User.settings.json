@@ -84,6 +84,10 @@
     "user_profile": {
       "via": "users_permissions_user",
       "model": "user-profile"
+    },
+    "company_profile": {
+      "via": "user",
+      "model": "company-profile"
     }
   }
 }
