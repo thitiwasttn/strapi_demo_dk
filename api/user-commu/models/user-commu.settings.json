@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_commus",
+  "info": {
+    "name": "user_commu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "community": {
+      "model": "community"
+    },
+    "follow_status": {
+      "type": "enumeration",
+      "enum": [
+        "follow",
+        "unfollow"
+      ]
+    }
+  }
+}
