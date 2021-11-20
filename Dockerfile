@@ -10,7 +10,7 @@ WORKDIR /root/app
 
 COPY . .
 
-RUN npm install && npm build
+RUN npm install && npm run build
 
 CMD ['npm' , 'run ','start']
 
