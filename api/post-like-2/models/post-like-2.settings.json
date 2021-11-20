@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "post_likes",
+  "collectionName": "post_like_2s",
   "info": {
-    "name": "post_like",
+    "name": "post_like_2",
     "description": ""
   },
   "options": {
@@ -12,13 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "post": {
-      "model": "post"
-    },
-    "user": {
+    "users": {
       "unique": true,
       "plugin": "users-permissions",
-      "model": "user"
+      "collection": "user"
+    },
+    "post": {
+      "unique": true,
+      "model": "post"
     }
   }
 }
