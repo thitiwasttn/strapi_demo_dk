@@ -12,6 +12,8 @@ COPY . .
 
 RUN npm install && npm run build
 
-CMD ['npm' , 'run start']
-
 EXPOSE 1337
+
+# ENTRYPOINT ["npm", "param1", "param2"]
+# CMD ['npm' , 'run start']
+
