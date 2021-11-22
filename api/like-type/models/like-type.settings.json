@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "like_types",
+  "info": {
+    "name": "like_type",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

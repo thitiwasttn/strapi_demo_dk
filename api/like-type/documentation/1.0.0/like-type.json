@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/post-likes": {
+    "/like-types": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost-like"
+                "$ref": "#/components/schemas/NewLike-type"
               }
             }
           }
         }
       }
     },
-    "/post-likes/count": {
+    "/like-types/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "parameters": []
       }
     },
-    "/post-likes/{id}": {
+    "/like-types/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost-like"
+                "$ref": "#/components/schemas/NewLike-type"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Post-like"
+          "Like-type"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Post-like": {
+      "Like-type": {
         "required": [
           "id"
         ],
@@ -535,144 +535,8 @@
           "id": {
             "type": "string"
           },
-          "post": {
-            "required": [
-              "id",
-              "title",
-              "detail"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "detail": {
-                "type": "string"
-              },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "video": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "post_by": {
-                "type": "string"
-              },
-              "status": {
-                "type": "boolean"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "image_profile": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "role_customs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "certification": {
-                "type": "string"
-              },
-              "sp_roles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_profile": {
-                "type": "string"
-              },
-              "company_profile": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "like_type": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "name": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -680,15 +544,9 @@
           }
         }
       },
-      "NewPost-like": {
+      "NewLike-type": {
         "properties": {
-          "post": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "like_type": {
+          "name": {
             "type": "string"
           },
           "published_at": {
