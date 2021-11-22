@@ -9,6 +9,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/home/search",
+      "handler": "home.search",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/home",
       "handler": "home.update",

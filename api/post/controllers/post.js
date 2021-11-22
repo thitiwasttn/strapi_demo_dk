@@ -16,7 +16,6 @@ module.exports = {
   },
 
   async findFeed(ctx) {
-
     let posts = await strapi.query('post').find({_sort: 'id:desc'});
     for (let post of posts) {
       try {
