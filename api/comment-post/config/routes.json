@@ -33,6 +33,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/comment-posts/comment-post",
+      "handler": "comment-post.commentPost",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/comment-posts/:id",
       "handler": "comment-post.update",

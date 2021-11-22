@@ -7,13 +7,13 @@
 
 module.exports = {
   async countLike(post_id) {
-    return await strapi.query('post-like').find({post: post_id});
+    return await strapi.query('post-like').count({post: post_id});
   },
   async setLikes(post) {
     let find = await strapi.services.post.countLike(post.id);
-    post.likes = find.length;
+    post.likes = find;
   },
   async setComment(post) {
-    post.comments = await strapi.query('comment-post').find({post: post.id});
+    post.comments = await strapi.query('comment-post').find({post: post.id,_sort: 'id:desc'});
   },
 };
