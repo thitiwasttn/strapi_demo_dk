@@ -12,6 +12,6 @@ COPY . .
 
 RUN npm install && npm run build
 
-# CMD ['strapi' , 'start']
+CMD ['npm' , 'run start']
 
 EXPOSE 1337
