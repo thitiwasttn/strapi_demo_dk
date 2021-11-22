@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-bookmark-posts",
+      "handler": "user-bookmark-post.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-bookmark-posts/count",
+      "handler": "user-bookmark-post.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-bookmark-posts/findByUser/:id",
+      "handler": "user-bookmark-post.findByUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-bookmark-posts/:id",
+      "handler": "user-bookmark-post.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-bookmark-posts",
+      "handler": "user-bookmark-post.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-bookmark-posts/:id",
+      "handler": "user-bookmark-post.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-bookmark-posts/:id",
+      "handler": "user-bookmark-post.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

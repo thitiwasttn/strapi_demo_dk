@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_bookmark_posts",
+  "info": {
+    "name": "user_bookmark_post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "post": {
+      "model": "post"
+    }
+  }
+}
