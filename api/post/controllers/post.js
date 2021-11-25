@@ -1,5 +1,6 @@
-const {sanitizeEntity} = require('strapi-utils');
-
+const {sanitizeEntity} = require('strapi-utils');;
+const logger = require('strapi-utils/lib/logger')
+const pino = require('pino')('./public/logger.log')
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
@@ -24,6 +25,7 @@ module.exports = {
         console.error(e)
       }
     }
+    pino.info(posts)
     return posts;
   },
 };
