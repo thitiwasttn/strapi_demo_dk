@@ -4,6 +4,8 @@ ENV DATABASE_NAME='strapi_dk'
 
 ENV DATABASE_HOST=172.17.0.1
 
+ENV TZ=Asia/Bangkok
+
 RUN mkdir /root/app
 
 WORKDIR /root/app
