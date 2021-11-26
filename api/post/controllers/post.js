@@ -1,4 +1,4 @@
-const {sanitizeEntity} = require('strapi-utils');
+const {sanitizeEntity, logger} = require('strapi-utils');
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
