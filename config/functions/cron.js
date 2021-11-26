@@ -11,6 +11,10 @@
  */
 
 module.exports = {
+  '*/1 * * * *': () => {
+    console.log('1 minute later');
+  },
+
   /**
    * Simple example.
    * Every monday at 1am.
